@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E9E9E9"
+    android:orientation="vertical">
+
+    <com.ben.recipe.ui.widget.MyScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- 上半背景 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400.0dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/about_bg" />
+
+                <ImageView
+                    android:id="@+id/iv_icon"
+                    android:layout_width="65.0dp"
+                    android:layout_height="65.0dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="115.0dp"
+                    android:src="@mipmap/icon2" />
+
+                <TextView
+                    android:id="@+id/tv_appname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_icon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15.0dp"
+                    android:text="@string/app_name"
+                    android:textColor="#deffffff"
+                    android:textSize="24.0sp" />
+
+                <TextView
+                    android:id="@+id/tv_oneword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_appname"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/one_word"
+                    android:textColor="#8bffffff"
+                    android:textSize="14.0sp" />
+
+                <Button
+                    android:id="@+id/bt_chat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36.0dp"
+                    android:layout_below="@id/tv_oneword"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="22.0dp"
+                    android:background="@drawable/focus_button_bg"
+                    android:text="@string/focus_us"
+                    android:textColor="@android:color/white"
+                    android:textSize="14.0sp" />
+
+            </RelativeLayout>
+            <!-- 同层下使用cardview -->
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.0dp"
+                android:layout_marginTop="-36dp"
+                android:layout_marginEnd="8.0dp"
+                android:layout_marginBottom="10.0dp"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:id="@+id/cv_create"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16.0dp"
+                        android:layout_marginTop="13.0dp"
+                        android:layout_marginBottom="15.0dp"
+                        android:text="关于"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14.0sp" />
+
+                    <LinearLayout
+                        android:id="@+id/kaifazhe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8.0dp"
+                        android:paddingBottom="15.0dp"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="20.0dp"
+                            android:layout_height="20.0dp"
+                            android:layout_marginLeft="20.0dp"
+                            android:layout_marginTop="8.0dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/developer" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15.0dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="开发者"
+                                android:textColor="#de000000"
+                                android:textSize="16.0sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.0dp"
+                                android:text="Ben" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chanpingsheji"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8.0dp"
+                        android:paddingBottom="15.0dp"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="20.0dp"
+                            android:layout_height="20.0dp"
+                            android:layout_marginLeft="20.0dp"
+                            android:layout_marginTop="8.0dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/design" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15.0dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="产品、设计"
+                                android:textColor="#de000000"
+                                android:textSize="16.0sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.0dp"
+                                android:text="Ben" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chuping"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8.0dp"
+                        android:paddingBottom="15.0dp"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="20.0dp"
+                            android:layout_height="20.0dp"
+                            android:layout_marginLeft="20.0dp"
+                            android:layout_marginTop="8.0dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/lab" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15.0dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="出品"
+                                android:textColor="#de000000"
+                                android:textSize="16.0sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.0dp"
+                                android:text="Ben" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.0dp"
+                android:layout_marginEnd="8.0dp"
+                android:layout_marginBottom="10.0dp">
+
+                <LinearLayout
+                    android:id="@+id/cv_chatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16.0dp"
+                        android:layout_marginTop="13.0dp"
+                        android:layout_marginBottom="15.0dp"
+                        android:text="联系我们"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="14.0sp" />
+
+                    <LinearLayout
+                        android:id="@+id/weixin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8.0dp"
+                        android:paddingBottom="15.0dp"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="20.0dp"
+                            android:layout_height="20.0dp"
+                            android:layout_marginLeft="20.0dp"
+                            android:layout_marginTop="8.0dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/weixin_black" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15.0dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="微信"
+                                android:textColor="#000000"
+                                android:textSize="16.0sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.0dp"
+                                android:text="关注微信" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/weibo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8.0dp"
+                        android:paddingBottom="15.0dp"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="20.0dp"
+                            android:layout_height="20.0dp"
+                            android:layout_marginLeft="20.0dp"
+                            android:layout_marginTop="8.0dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/weibo_black" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15.0dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="微博"
+                                android:textColor="#000000"
+                                android:textSize="16.0sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.0dp"
+                                android:text="http://weibo.com/" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/youxiang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8.0dp"
+                        android:paddingBottom="15.0dp"
+                        android:background="?android:attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="20.0dp"
+                            android:layout_height="20.0dp"
+                            android:layout_marginLeft="20.0dp"
+                            android:layout_marginTop="8.0dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/mail" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15.0dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="邮箱"
+                                android:textColor="#000000"
+                                android:textSize="16.0sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5.0dp"
+                                android:text="xxxxx@163.com" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/shoucang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.0dp"
+                android:layout_marginEnd="8.0dp"
+                android:layout_marginBottom="10.0dp"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:layout_width="wrap_content"
+                        android:text="收藏"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8.0dp"
+                android:layout_marginEnd="8.0dp"
+                android:layout_marginBottom="10.0dp"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:id="@+id/quit"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:paddingTop="14dp"
+                        android:paddingBottom="14dp"
+                        android:layout_width="wrap_content"
+                        android:text="退出登录"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </com.ben.recipe.ui.widget.MyScrollView>
+
+    <View
+        android:id="@+id/vw_about_status_bar_holder"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:background="#00ff5a64" />
+
+
+    <View
+        android:id="@+id/toolbar_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="4.0dip"
+        android:background="@drawable/about_shadow" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_interceptor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants" >
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/float_bt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10.0dp"
+            android:paddingRight="10.0dp"
+            fab:menu_backgroundColor="#60000000"
+            fab:menu_colorNormal="#ffda4336"
+            fab:menu_colorPressed="#ff888888"
+            fab:menu_colorRipple="#99ffffff"
+            fab:menu_icon="@drawable/fab_add">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/about_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom|center"
+                android:layout_marginEnd="8.0dip"
+                android:layout_marginBottom="8.0dip"
+                android:src="@drawable/share_white"
+                fab:fab_colorNormal="#ff03a9f4"
+                fab:fab_colorPressed="#ff03a9f4"
+                fab:fab_colorRipple="#ff03a9f4"
+                fab:fab_label="@string/share_to_friend"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/about_weibo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom|center"
+                android:layout_marginEnd="8.0dip"
+                android:layout_marginBottom="8.0dip"
+                android:src="@drawable/weibo_white"
+                fab:fab_colorNormal="#ffff5722"
+                fab:fab_colorPressed="#ffff5722"
+                fab:fab_colorRipple="#ffff5722"
+                fab:fab_label="@string/follow_us_weibo"
+                fab:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/about_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom|center"
+                android:layout_marginEnd="8.0dip"
+                android:layout_marginBottom="8.0dip"
+                android:src="@drawable/weixin_white"
+                fab:fab_colorNormal="#ff4caf50"
+                fab:fab_colorPressed="#ff4caf50"
+                fab:fab_colorRipple="#ff4caf50"
+                fab:fab_label="@string/follow_us_wechat"
+                fab:fab_size="mini" />
+        </com.github.clans.fab.FloatingActionMenu>
+    </FrameLayout>
+
+</RelativeLayout>
